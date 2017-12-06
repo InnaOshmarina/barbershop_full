@@ -15,7 +15,7 @@
     <header class="page-header">
       <h1 class="visually-hidden">Барбершоп «Бородинский» - истинно мужская классика</h1>
       
-      <div class="page-header__logo-wrap">
+      <div class="page-header__logo-wrap"> 
         <picture>
           <source media="(min-width: 1200px)" srcset="images/logotype-desktop.svg">
           <source media="(min-width: 768px)" srcset="images/logotype-tablet.svg">
@@ -104,6 +104,7 @@
         </div>
       </div>      
     </section>
+
     <section class="news">
       <div class="news__wrapper">
         <h2 class="news__title">Новости и акции</h2>
@@ -141,24 +142,24 @@
             <div class="reviews__author-foto">
               <picture>
                 <source media="(min-width: 1200px)" srcset="images/t_barker-desktop.jpg">
-                <source media="(min-width: 768px)" srcset="images/t_barker-tablet.png">
-                <img src="images/t_barker-mobile.png" width="50" height="50" alt="Фото Трэвиса Баркера">
+                <source media="(min-width: 768px)" srcset="images/t_barker-tablet.jpg">
+                <img src="images/t_barker-mobile.jpg" width="50" height="50" alt="Фото Трэвиса Баркера">
               </picture>                    
             </div>
             <cite class="reviews__author-name">Трэвис Баркер</cite>
             <p>Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
           </blockquote>
-          
-          <blockquote class="reviews__item  slider__item">
-            <div class="reviews__author-foto">
-              <picture>
-                <source media="(min-width: 1200px)" srcset="images/t_barker-desktop.jpg">
-                <source media="(min-width: 768px)" srcset="images/t_barker-tablet.png">
-                <img src="images/t_barker-mobile.png" width="50" height="50" alt="Фото Джона Смита">
-              </picture>                    
-            </div>
-          </blockquote>
-          
+          <button class="reviews__prev" type="button">Предыдущий отзыв</button>          
+          <button class="reviews__next" type="button">Следующий отзыв</button>          
+        </div>
+        
+        <div class="reviews__toggle  slider__toggles">
+          <label class="slider__toggle" for="reviews-input-1">1</label>
+          <label class="slider__toggle" for="reviews-input-2">2</label>
+          <label class="slider__toggle" for="reviews-input-3">3</label>
+        </div>
+      </div>
+    </section>    
           
     <footer class="page-footer">
       <div class="page-footer__wrapper">

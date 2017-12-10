@@ -85,14 +85,14 @@ a:hover {
 
                                                       /*    page-header.scss   */
 
-.page-header__logo-wrap {
+.page-header__logo {
     height: 85px;
     text-align: center;
 }
 
-.page-header__logo-wrap img {
+.page-header__logo img {
     width: 230px;
-    height: 80px;
+    height: 85px;
 }
     
 @media (min-width: 768px) {
@@ -102,47 +102,90 @@ a:hover {
     background-color: #000;
   }
   
-  .page-header__logo-wrap { 
+  .page-header__logo { 
     order: 2;
     position: relative;   
     width: 100%;
     height: 400px;
     background-color: #000;
-    background-image: url("../images/fon-header.jpg");
+    background-image: url("../images/fon-header-tablet-inner.jpg");
     background-repeat: no-repeat;
     background-position: center -9px;
   }      
 
-  .page-header__logo-wrap img {
+  .page-header__logo img {
     position: absolute;
     top: 39px;    
     left: 50%;
     width: 370px;
     height: auto;
     transform: translateX(-50%);
-  }   
+  }  
+  .page-header__logo--inner {
+    height: 214px;
+  }
+
+ .page-header__logo--inner img {
+    bottom: 73px;
+  }
+ .page-header__logo--inner::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 40px;
+    background-color: #f8f5f2;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0);
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0);
+  }
+  .page-header__logo--inner::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 40px;
+    background-color: #f8f5f2;
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
+  }
 }
 
-@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
-  .page-header__logo-wrap {
+/* @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  .page-header__logo {
     background-image: url("../images/fon-header-2x.jpg");
     background-size: 1338px auto;
   }  
-}  
+}   */
 
 @media (min-width: 1200px) {
   
-  .page-header__logo-wrap {    
+  .page-header__logo {    
     height: 648px;
     background-position: center 0px;
     background-size: cover;
   }
   
-  .page-header__logo-wrap img {    
+  /* .page-header__logo img {    
      top: 57px;
-  }
-}
+  } */
 
+  .page-header__logo img {
+    bottom: 438px;
+  }
+  .page-header__logo--inner {
+    height: 307px;
+  }
+  .page-header__logo--inner img {
+    bottom: 99px;
+  }
+ .page-header__logo--inner::before,
+ .page-header__logo--inner::after {
+    height: 64px;
+ }
+}
+  
                                                   /* main-nav.scss */
 
 .main-nav {
@@ -1383,7 +1426,7 @@ a:hover {
 .booking-haircut__field--model,
 .booking-haircut__field--additional {
   position: absolute;
-  opacity: 0;
+  display: none;
 }
 .booking-haircut__label {
   display: block;
@@ -1871,6 +1914,7 @@ a:hover {
 }
 .page-footer__contacts a {
   position: absolute;
+  margin: 0 auto;
   width: 87%;
   bottom: -68px;
   left: 0;
@@ -1898,6 +1942,7 @@ a:hover {
 }
 .page-footer__copyright-link {
   position: absolute;
+  margin: 0 auto;
   width: 87%;
   top: 40px;
   left: 0;
